@@ -1,23 +1,17 @@
-# Use a base image with Node.js
 FROM node:18-alpine
 
-# Create app directory
 WORKDIR /app
 
-# Copy all files
+# Install dependencies first (cache layer)
+COPY package*.json ./
+COPY my-tina-app/package*.json ./my-tina-app/
+RUN npm ci && npm --prefix my-tina-app ci
+
+# Copy rest of the app
 COPY . .
 
-# Install deps (uses package-lock.json or pnpm-lock.yaml if present)
-RUN npm install
+# Expose port used by Docusaurus (and optionally TinaCMS)
+EXPOSE 3232 3000 4001
 
-# Build TinaCMS (Next.js)
-RUN npm --prefix my-tina-app run build-local
-
-# Build Docusaurus
-RUN npm run build
-
-# Expose the port Docusaurus uses
-EXPOSE 3232
-
-# Start both services with concurrently
+# Start both Docusaurus and TinaCMS dev servers
 CMD ["npm", "run", "dev"]
