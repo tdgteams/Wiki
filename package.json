@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "docusaurus": "docusaurus",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -18,15 +18,21 @@
     "@docusaurus/core": "3.8.0",
     "@docusaurus/preset-classic": "3.8.0",
     "@mdx-js/react": "^3.0.0",
+    "@tinacms/cli": "^1.9.8",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-tinacms-editor": "^0.53.26",
+    "redoc": "^2.5.0",
+    "styled-components": "^6.1.18",
+    "tinacms": "^2.7.8"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.0",
     "@docusaurus/tsconfig": "3.8.0",
     "@docusaurus/types": "3.8.0",
+    "@types/node": "^22.15.29",
     "typescript": "~5.6.2"
   },
   "browserslist": {
