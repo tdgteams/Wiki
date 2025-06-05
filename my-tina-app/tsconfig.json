@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      { "name": "next" }
+    ],
+    "strictNullChecks": true,
+
+    /* 🔽  new lines begin */
+    "baseUrl": ".",                // allow relative path mapping from project root
+    "paths": {
+      "tina/*": ["../tina/*"]      // map imports like 'tina/__generated__/client'
+    }
+    /* 🔼  new lines end */
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
+
