@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -13,16 +17,20 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "plugins": [
-      { "name": "next" }
+      {
+        "name": "next"
+      }
     ],
     "strictNullChecks": true,
-
     /* 🔽  new lines begin */
-    "baseUrl": ".",                // allow relative path mapping from project root
+    "baseUrl": ".", // allow relative path mapping from project root
     "paths": {
-      "tina/*": ["../tina/*"]      // map imports like 'tina/__generated__/client'
+      "tina/*": [
+        "../tina/*"
+      ] // map imports like 'tina/__generated__/client'
     }
-    /* 🔼  new lines end */
+    /* 🔼  new lines end */,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -30,6 +38,7 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
-
