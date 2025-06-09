@@ -13,7 +13,7 @@ const getDocId = (doc) => {
 
 const getPageRoute = (page) => {
   return page
-    .replace(/\.mdx?$/, "")
+  .replace(/\.(js|jsx|mdx?)$/, "")
     .split("/")
     .slice(2)
     .join("/");
