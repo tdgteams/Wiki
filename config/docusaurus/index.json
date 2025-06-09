@@ -20,6 +20,12 @@
       "position": "left"
     },
     {
+      "label": "API Docs",
+      "link": "page",
+      "pageLink": "src/pages/api-docs.js",
+      "position": "left"
+    },
+    {
       "label": "Docusaurus GitHub",
       "link": "external",
       "externalLink": "https://github.com/facebook/docusaurus",
